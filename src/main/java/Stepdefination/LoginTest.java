@@ -4,6 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+
+import java.text.ParseException;
+
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import cucumber.api.java.en.Given;
@@ -14,6 +19,7 @@ public class LoginTest {
 
 	static WebDriver driver;
 	public String strInputDate;
+	
 
 	@Given("^I am a website user$")
 	public void i_am_a_website_user() throws Throwable {
@@ -45,36 +51,57 @@ public class LoginTest {
 		DateFormatValidation.getAttribute("innerText");
     	System.out.println("strdate Format is:"+DateFormatValidation.getAttribute("innerText"));
      	
-    	SimpleDateFormat dt = new SimpleDateFormat("dd-MMM-yyyy"); 
-    	Date date = dt.parse(strInputDate); 
+    	/*SimpleDateFormat dt = new SimpleDateFormat("dd-MMMM-yyyy"); 
+    	Date date = dt.parse(strInputDate);  
     	String strnewdate = new SimpleDateFormat("E MMM dd yyyy 00:00:00 'GMT'+0000").format(date);
-    	System.out.println(strnewdate);
+    	System.out.println(strnewdate);*/
+    
+    	String input1 = "17-July-2020";
+    	
+    	String input2 = "17-July-2020";
+    	//new code
+    	System.out.println("strInputDate"+input1);
+    	SimpleDateFormat sdf = new SimpleDateFormat("E MMM dd yyyy 00:00:00 'GMT'+0000");
+    	Date output = sdf.parse(input1);
+    	System.out.println(output);
+    	
+    	
+    	
+    	/*String strnewdate=null;
+    	List<SimpleDateFormat> dt=new ArrayList<SimpleDateFormat>();
+    	dt.add(new SimpleDateFormat("dd-MMMM-yyyy"));
+    	dt.add(new SimpleDateFormat("dd-MM-yyyy"));  
+    	System.out.println("Till here");
 		
-		if(scenario.equals("Positive"))
-		{
-			if(strdate.equals(strnewdate))
-			{
-				System.out.println("The test case is passed.");
-			}
-			else
-			{
-				System.out.println("It is a defect.");
-			}
-		}
-		else if(scenario.equals("Negative"))
-		{
-
-			if(strdate.equals(value))
-			{
-				System.out.println("The test case is passed.");
-			}
-			else
-			{
-				System.out.println("It is a defect.");
-			}
-
-		}
-		driver.close();
+    	for(SimpleDateFormat f:dt)
+    	{
+    		Date date=f.parse(strInputDate); 
+    		strnewdate = new SimpleDateFormat("E MMM dd yyyy 00:00:00 'GMT'+0000").format(date);
+    		 System.out.println(strnewdate);
+    		 
+				  boolean b =Boolean.parseBoolean(strnewdate);
+				  if(b=true) {
+				 break; 
+				 }
+		*/		
+    		 
+    	//}
+    	
+		/*
+		 * System.out.println("Till here not");
+		 * 
+		 * 
+		 * if(scenario.equals("Positive")) { if(strdate.equals(strnewdate)) {
+		 * System.out.println("The test case is passed."); } else {
+		 * System.out.println("It is a defect."); }
+		 * 
+		 * } else if(scenario.equals("Negative")) {
+		 * 
+		 * if(strdate.equals(value)) { System.out.println("The test case is passed."); }
+		 * else { System.out.println("It is a defect."); }
+		 * 
+		 * }
+		 */		driver.close();
 		driver.quit();
 	}
 }
