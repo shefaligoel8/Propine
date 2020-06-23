@@ -14,7 +14,7 @@ import com.cucumber.listener.*;
 		glue = { "Stepdefination" }, 
 		plugin={"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"})
 
-public class TestRun 
+public class TestRunner 
    {
 	@AfterClass
 	public static void writeExtentReport() {
