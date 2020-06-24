@@ -47,17 +47,30 @@ public class PropineTest {
 		DateFormatValidation.getAttribute("innerText");
 		System.out.println("strdate Format is:"+DateFormatValidation.getAttribute("innerText"));
 		
-		List<SimpleDateFormat> dateFormatList = new ArrayList<SimpleDateFormat>();
-		//dateFormatList.add(new SimpleDateFormat("dd-MMMM-yyyy"));
+		//List<SimpleDateFormat> dateFormatList = new ArrayList<SimpleDateFormat>();
+		
+		Set<SimpleDateFormat> dateFormatList = new HashSet<SimpleDateFormat>();
+		
+		dateFormatList.add(new SimpleDateFormat("dd-MMMM-yyyy"));
 		dateFormatList.add(new SimpleDateFormat("dd-MMMM-yy"));
-		//dateFormatList.add(new SimpleDateFormat("dd-MM-yyyy"));
-		//dateFormatList.add(new SimpleDateFormat("dd-MM-yy"));
-		/*
-		 * dateFormatList.add(new SimpleDateFormat("MMMM-dd-yyyy"));
-		 * dateFormatList.add(new SimpleDateFormat("MMM-dd-yy")); dateFormatList.add(new
-		 * SimpleDateFormat("MM-dd-yyyy")); dateFormatList.add(new
-		 * SimpleDateFormat("MM-dd-yy"));
-		 */
+		dateFormatList.add(new SimpleDateFormat("MMMM-dd-yy"));
+		dateFormatList.add(new SimpleDateFormat("dd-MM-yyyy"));
+		dateFormatList.add(new SimpleDateFormat("dd-MM-yy"));
+		dateFormatList.add(new SimpleDateFormat("MMMM-dd-yyyy"));
+		dateFormatList.add(new SimpleDateFormat("MM-dd-yy"));
+	    dateFormatList.add(new SimpleDateFormat("MM-dd-yyyy")); 
+	    //dateFormatList.add(new SimpleDateFormat("MM-dd-yy"));
+	    Thread.sleep(3000);
+		dateFormatList.add(new SimpleDateFormat("dd/MMMM/yyyy"));
+		dateFormatList.add(new SimpleDateFormat("dd/MMMM/yy"));
+		dateFormatList.add(new SimpleDateFormat("MMMM/dd/yy"));
+		dateFormatList.add(new SimpleDateFormat("dd/MM/yyyy"));
+		dateFormatList.add(new SimpleDateFormat("dd/MM/yy"));
+		dateFormatList.add(new SimpleDateFormat("MMMM/dd/yyyy"));
+		dateFormatList.add(new SimpleDateFormat("MM/dd/yy"));
+	    dateFormatList.add(new SimpleDateFormat("MM/dd/yyyy")); 
+		//dateFormatList.add(new SimpleDateFormat("MM/dd/yy"));
+		 
 		boolean isConverted = false;
 		Date date = null;
 		for(SimpleDateFormat dateFormat : dateFormatList) {
