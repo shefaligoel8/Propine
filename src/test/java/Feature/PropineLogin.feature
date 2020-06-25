@@ -43,7 +43,7 @@ Examples:
 |Jul 17 20     |Positive|NA|
 |11 17 2020    |Positive|NA|
 |07 17 20      |Positive|NA|
-|10*10*20      |Negative|Invalid date|
+|10*10*2020      |Negative|Invalid date|
 |10.12.2020    |Negative|Invalid date|
 |10&11&2020    |Negative|Invalid date|
 |11@10#2020    |Negative|Invalid date|

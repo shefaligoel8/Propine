@@ -70,7 +70,17 @@ public class PropineTest {
 		dateFormatList.add(new SimpleDateFormat("MMMM dd yyyy"));
 		dateFormatList.add(new SimpleDateFormat("MM dd yy"));
 	    dateFormatList.add(new SimpleDateFormat("MM dd yyyy")); 
-	
+	    dateFormatList.add(new SimpleDateFormat("MM*dd*yyyy")); 
+	    dateFormatList.add(new SimpleDateFormat("MM.dd.yyyy"));
+	    dateFormatList.add(new SimpleDateFormat("MM&dd&yyyy"));
+	    dateFormatList.add(new SimpleDateFormat("MM@dd#yyyy"));
+	    dateFormatList.add(new SimpleDateFormat("MM$dd%yyyy"));
+	    dateFormatList.add(new SimpleDateFormat("yyyy(dd%MM"));
+	    dateFormatList.add(new SimpleDateFormat("yyyyddMM"));
+	    dateFormatList.add(new SimpleDateFormat("ddMMyyyy"));
+	    dateFormatList.add(new SimpleDateFormat("dd:MM:yyyy"));
+	   
+	    
 		boolean isConverted = false;
 		Date date = null;
 		for(SimpleDateFormat dateFormat : dateFormatList) {
