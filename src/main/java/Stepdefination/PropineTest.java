@@ -12,10 +12,8 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class PropineTest {
-
 	static WebDriver driver;
 	public String strInputDate;
-
 
 	@Given("^I am a website user$")
 	public void i_am_a_website_user() throws Throwable {
@@ -47,10 +45,7 @@ public class PropineTest {
 		DateFormatValidation.getAttribute("innerText");
 		System.out.println("strdate Format is:"+DateFormatValidation.getAttribute("innerText"));
 		
-		//List<SimpleDateFormat> dateFormatList = new ArrayList<SimpleDateFormat>();
-		
-		Set<SimpleDateFormat> dateFormatList = new HashSet<SimpleDateFormat>();
-		
+		Set<SimpleDateFormat> dateFormatList = new HashSet<SimpleDateFormat>();	
 		dateFormatList.add(new SimpleDateFormat("dd-MMMM-yyyy"));
 		dateFormatList.add(new SimpleDateFormat("dd-MMMM-yy"));
 		dateFormatList.add(new SimpleDateFormat("MMMM-dd-yy"));
@@ -59,8 +54,6 @@ public class PropineTest {
 		dateFormatList.add(new SimpleDateFormat("MMMM-dd-yyyy"));
 		dateFormatList.add(new SimpleDateFormat("MM-dd-yy"));
 	    dateFormatList.add(new SimpleDateFormat("MM-dd-yyyy")); 
-	    //dateFormatList.add(new SimpleDateFormat("MM-dd-yy"));
-	    Thread.sleep(3000);
 		dateFormatList.add(new SimpleDateFormat("dd/MMMM/yyyy"));
 		dateFormatList.add(new SimpleDateFormat("dd/MMMM/yy"));
 		dateFormatList.add(new SimpleDateFormat("MMMM/dd/yy"));
@@ -69,8 +62,15 @@ public class PropineTest {
 		dateFormatList.add(new SimpleDateFormat("MMMM/dd/yyyy"));
 		dateFormatList.add(new SimpleDateFormat("MM/dd/yy"));
 	    dateFormatList.add(new SimpleDateFormat("MM/dd/yyyy")); 
-		//dateFormatList.add(new SimpleDateFormat("MM/dd/yy"));
-		 
+		dateFormatList.add(new SimpleDateFormat("dd MMMM yyyy"));
+		dateFormatList.add(new SimpleDateFormat("dd MMMM yy"));
+		dateFormatList.add(new SimpleDateFormat("MMMM dd yy"));
+		dateFormatList.add(new SimpleDateFormat("dd MM yyyy"));
+		dateFormatList.add(new SimpleDateFormat("dd MM yy"));
+		dateFormatList.add(new SimpleDateFormat("MMMM dd yyyy"));
+		dateFormatList.add(new SimpleDateFormat("MM dd yy"));
+	    dateFormatList.add(new SimpleDateFormat("MM dd yyyy")); 
+	
 		boolean isConverted = false;
 		Date date = null;
 		for(SimpleDateFormat dateFormat : dateFormatList) {
@@ -83,7 +83,6 @@ public class PropineTest {
 		if(!isConverted)
 			throw new Exception("Format Not Found");
 		
-
 		SimpleDateFormat dateFormat =  new SimpleDateFormat("E MMM dd 20yy 00:00:00 'GMT'+0000");
 		String strCurrentDate=dateFormat.format(date);
 		System.out.println("strCurrentDate Format is:"+strCurrentDate);
@@ -102,10 +101,14 @@ public class PropineTest {
 		} else if(scenario.equals("Negative"))
 		{
 
-			if(strdate.equals(value)) { System.out.println("The test case is passed.");
-			}
-			else { System.out.println("It is a defect."); 
-			}
+			if(strdate.equals(value))
+		{
+			System.out.println("The test case is passed.");
+		}
+			else 
+		{ 
+			System.out.println("It is a defect."); 
+		}
 
 		}
 		driver.close();
