@@ -21,4 +21,4 @@ public class TestRunner
 		String reportConfigPath="C:\\Users\\Sourav\\eclipse-workspace\\Propine-Assignment\\src\\test\\java\\extent-config.xml";
 		Reporter.loadXMLConfig(new File(reportConfigPath));
 	}
-}
+}              

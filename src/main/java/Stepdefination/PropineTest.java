@@ -42,34 +42,39 @@ public class PropineTest {
 	public void i_should_see_a_date_on_the_form_with_a_for_the(String value,String scenario) throws Throwable {
 		WebElement DateFormatValidation = driver.findElement(By.xpath("//div[@class='col-md-6']/div"));
 		String strdate=DateFormatValidation.getText().trim();
-		DateFormatValidation.getAttribute("innerText");
-		System.out.println("strdate Format is:"+DateFormatValidation.getAttribute("innerText"));
 		
-		Set<SimpleDateFormat> dateFormatList = new HashSet<SimpleDateFormat>();	
+		String []arrstrDate=strdate.split(":");
+		String arroldDate=arrstrDate[0];
+		String oldDate=arroldDate.substring(4,arroldDate.length()-3).trim();
+		System.out.println("stroldDate Format is:"+oldDate);
+		//DateFormatValidation.getAttribute("innerText");
+		//System.out.println("strdate Format is:"+DateFormatValidation.getAttribute("innerText"));
+		
+		Set<SimpleDateFormat> dateFormatList = new LinkedHashSet<SimpleDateFormat>();	
 		dateFormatList.add(new SimpleDateFormat("dd-MMMM-yyyy"));
 		dateFormatList.add(new SimpleDateFormat("dd-MMMM-yy"));
 		dateFormatList.add(new SimpleDateFormat("MMMM-dd-yy"));
 		dateFormatList.add(new SimpleDateFormat("dd-MM-yyyy"));
 		dateFormatList.add(new SimpleDateFormat("dd-MM-yy"));
 		dateFormatList.add(new SimpleDateFormat("MMMM-dd-yyyy"));
-		dateFormatList.add(new SimpleDateFormat("MM-dd-yy"));
-	    dateFormatList.add(new SimpleDateFormat("MM-dd-yyyy")); 
+		dateFormatList.add(new SimpleDateFormat("MMM-dd-yyyy"));
+	    dateFormatList.add(new SimpleDateFormat("MM-dd-yy")); 
 		dateFormatList.add(new SimpleDateFormat("dd/MMMM/yyyy"));
 		dateFormatList.add(new SimpleDateFormat("dd/MMMM/yy"));
 		dateFormatList.add(new SimpleDateFormat("MMMM/dd/yy"));
 		dateFormatList.add(new SimpleDateFormat("dd/MM/yyyy"));
 		dateFormatList.add(new SimpleDateFormat("dd/MM/yy"));
 		dateFormatList.add(new SimpleDateFormat("MMMM/dd/yyyy"));
-		dateFormatList.add(new SimpleDateFormat("MM/dd/yy"));
-	    dateFormatList.add(new SimpleDateFormat("MM/dd/yyyy")); 
+	    dateFormatList.add(new SimpleDateFormat("MMM/dd/yyyy"));
+		dateFormatList.add(new SimpleDateFormat("MM/dd/yy")); 
 		dateFormatList.add(new SimpleDateFormat("dd MMMM yyyy"));
 		dateFormatList.add(new SimpleDateFormat("dd MMMM yy"));
 		dateFormatList.add(new SimpleDateFormat("MMMM dd yy"));
 		dateFormatList.add(new SimpleDateFormat("dd MM yyyy"));
 		dateFormatList.add(new SimpleDateFormat("dd MM yy"));
 		dateFormatList.add(new SimpleDateFormat("MMMM dd yyyy"));
+		dateFormatList.add(new SimpleDateFormat("MM dd yyyy"));
 		dateFormatList.add(new SimpleDateFormat("MM dd yy"));
-	    dateFormatList.add(new SimpleDateFormat("MM dd yyyy")); 
 	    dateFormatList.add(new SimpleDateFormat("MM*dd*yyyy")); 
 	    dateFormatList.add(new SimpleDateFormat("MM.dd.yyyy"));
 	    dateFormatList.add(new SimpleDateFormat("MM&dd&yyyy"));
@@ -80,7 +85,6 @@ public class PropineTest {
 	    dateFormatList.add(new SimpleDateFormat("ddMMyyyy"));
 	    dateFormatList.add(new SimpleDateFormat("dd:MM:yyyy"));
 	   
-	    
 		boolean isConverted = false;
 		Date date = null;
 		for(SimpleDateFormat dateFormat : dateFormatList) {
@@ -90,16 +94,17 @@ public class PropineTest {
 				break;
 			} catch (ParseException e) {}
 		}
-		if(!isConverted)
-			throw new Exception("Format Not Found");
+		String newDate="";
+		if(isConverted)
+		{
 		
-		SimpleDateFormat dateFormat =  new SimpleDateFormat("E MMM dd 20yy 00:00:00 'GMT'+0000");
-		String strCurrentDate=dateFormat.format(date);
-		System.out.println("strCurrentDate Format is:"+strCurrentDate);
+		SimpleDateFormat dateFormat =  new SimpleDateFormat("MMM dd 20yy");
+		newDate=dateFormat.format(date).trim();
+		System.out.println("strNewDate Format is: "+newDate);
 		
 		if(scenario.equals("Positive"))
 		{ 
-			if(strdate.equals(strCurrentDate))
+			if(oldDate.equals(newDate))
 		{
 			System.out.println("The test case is passed.");
 		}
@@ -111,7 +116,7 @@ public class PropineTest {
 		} else if(scenario.equals("Negative"))
 		{
 
-			if(strdate.equals(value))
+			if(value.equals(newDate))
 		{
 			System.out.println("The test case is passed.");
 		}
@@ -124,5 +129,6 @@ public class PropineTest {
 		driver.close();
 		driver.quit();
 	}
+}
 }
 

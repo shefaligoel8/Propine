@@ -38,8 +38,7 @@
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
-						<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
-			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
 		<!-- report name -->
@@ -52,7 +51,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Jun 25, 2020 06:39:46 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Jun 26, 2020 01:51:54 PM</span>
 				</a>
 			</li>
 			<li>
@@ -78,7 +77,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -129,10 +127,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -144,10 +142,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='78.947%'><span class='strong'>45</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>57</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='21.053%'>12</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -159,10 +157,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='92.982%'><span class='strong'>159</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>171</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='7.018%'>12</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -176,15 +174,15 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Date Validation on form</span>
-						<span class='test-time'>Jun 25, 2020 06:39:46 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-time'>Jun 26, 2020 01:51:55 PM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
-<div class='scenariooutline node' test-id='2' status='fail'>
-	<span class='duration right label'>0h 14m 37s+765ms</span>
+<div class='scenariooutline node' test-id='2' status='pass'>
+	<span class='duration right label'>0h 12m 25s+476ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
 		<span class="desc-text">User wants to enter the delivery date on form.</span>
@@ -202,11 +200,11 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='5' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "17-July-2020" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "10-ju-2020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='6' class='node then pass' status='pass'><b>Then</b>
-						<span class="bdd-step-name">Then I should see a date on the form with a "NA" for the "Positive"</span>
+						<span class="bdd-step-name">Then I should see a date on the form with a "Invalid date" for the "Negative"</span>
 							<div class='pre'>passed</div>
 					</li>
 				</ul>
@@ -223,11 +221,11 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='9' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "20-August-20" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "10/Au/2020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='10' class='node then pass' status='pass'><b>Then</b>
-						<span class="bdd-step-name">Then I should see a date on the form with a "NA" for the "Positive"</span>
+						<span class="bdd-step-name">Then I should see a date on the form with a "Invalid date" for the "Negative"</span>
 							<div class='pre'>passed</div>
 					</li>
 				</ul>
@@ -244,7 +242,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='13' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "17-Aug-2020" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "17-July-2020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='14' class='node then pass' status='pass'><b>Then</b>
@@ -265,7 +263,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='17' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "17-Oct-20" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "20-August-20" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='18' class='node then pass' status='pass'><b>Then</b>
@@ -286,7 +284,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='21' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "27-06-2020" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "17-Aug-2020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='22' class='node then pass' status='pass'><b>Then</b>
@@ -307,7 +305,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='25' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "17-08-20" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "17-Oct-20" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='26' class='node then pass' status='pass'><b>Then</b>
@@ -328,7 +326,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='29' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "July-20-2020" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "27-06-2020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='30' class='node then pass' status='pass'><b>Then</b>
@@ -349,7 +347,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='33' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "July-17-20" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "17-08-20" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='34' class='node then pass' status='pass'><b>Then</b>
@@ -370,7 +368,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='37' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "Jul-10-2020" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "July-20-2020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='38' class='node then pass' status='pass'><b>Then</b>
@@ -391,7 +389,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='41' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "Jul-09-20" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "July-17-20" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='42' class='node then pass' status='pass'><b>Then</b>
@@ -412,7 +410,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='45' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "11-17-2020" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "Jul-10-2020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='46' class='node then pass' status='pass'><b>Then</b>
@@ -433,7 +431,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='49' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "09-17-20" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "Jul-09-20" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='50' class='node then pass' status='pass'><b>Then</b>
@@ -454,7 +452,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='53' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "10/August/2020" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "11-17-2020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='54' class='node then pass' status='pass'><b>Then</b>
@@ -475,7 +473,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='57' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "17/August/20" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "09-17-20" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='58' class='node then pass' status='pass'><b>Then</b>
@@ -496,7 +494,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='61' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "10/Sep/2020" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "10/August/2020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='62' class='node then pass' status='pass'><b>Then</b>
@@ -517,7 +515,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='65' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "20/Jul/20" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "17/August/20" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='66' class='node then pass' status='pass'><b>Then</b>
@@ -538,7 +536,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='69' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "19/07/2020" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "10/Sep/2020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='70' class='node then pass' status='pass'><b>Then</b>
@@ -559,7 +557,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='73' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "27/08/20" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "20/Jul/20" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='74' class='node then pass' status='pass'><b>Then</b>
@@ -580,7 +578,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='77' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "October/17/2020" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "19/07/2020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='78' class='node then pass' status='pass'><b>Then</b>
@@ -601,7 +599,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='81' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "August/10/20" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "27/08/20" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='82' class='node then pass' status='pass'><b>Then</b>
@@ -622,7 +620,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='85' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "Jul/17/2020" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "October/17/2020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='86' class='node then pass' status='pass'><b>Then</b>
@@ -643,7 +641,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='89' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "Sep/17/20" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "August/10/20" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='90' class='node then pass' status='pass'><b>Then</b>
@@ -664,7 +662,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='93' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "12/17/2020" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "Jul/17/2020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='94' class='node then pass' status='pass'><b>Then</b>
@@ -685,7 +683,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='97' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "07/11/20" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "Sep/17/20" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='98' class='node then pass' status='pass'><b>Then</b>
@@ -706,7 +704,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='101' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "17 July 2020" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "12/17/2020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='102' class='node then pass' status='pass'><b>Then</b>
@@ -727,7 +725,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='105' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "19 July 20" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "07/11/20" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='106' class='node then pass' status='pass'><b>Then</b>
@@ -748,7 +746,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='109' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "17 Aug 2020" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "17 July 2020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='110' class='node then pass' status='pass'><b>Then</b>
@@ -769,7 +767,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='113' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "15 Sep 20" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "19 July 20" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='114' class='node then pass' status='pass'><b>Then</b>
@@ -790,7 +788,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='117' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "12 10 2020" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "17 Aug 2020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='118' class='node then pass' status='pass'><b>Then</b>
@@ -811,7 +809,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='121' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "12 10 20" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "15 Sep 20" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='122' class='node then pass' status='pass'><b>Then</b>
@@ -820,7 +818,7 @@
 					</li>
 				</ul>
 		</li>
-		<li test-id='123' class='node scenario fail' status='fail'>
+		<li test-id='123' class='node scenario pass' status='pass'>
 			
 			<b>Scenario</b>
 			
@@ -832,15 +830,12 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='125' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "Octobor 17 2020" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "12 10 2020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='126' class='node then fail' status='fail'><b>Then</b>
+					<li test-id='126' class='node then pass' status='pass'><b>Then</b>
 						<span class="bdd-step-name">Then I should see a date on the form with a "NA" for the "Positive"</span>
-							<div class='pre'><pre>java.lang.Exception: Format Not Found
-	at Stepdefination.PropineTest.i_should_see_a_date_on_the_form_with_a_for_the(PropineTest.java:84)
-	at ✽.Then I should see a date on the form with a "NA" for the "Positive"(PropineLogin.feature:6)
-</pre></div>
+							<div class='pre'>passed</div>
 					</li>
 				</ul>
 		</li>
@@ -856,7 +851,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='129' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "July 17 20" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "12 10 20" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='130' class='node then pass' status='pass'><b>Then</b>
@@ -877,7 +872,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='133' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "Jun 19 2020" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "October 17 2020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='134' class='node then pass' status='pass'><b>Then</b>
@@ -898,7 +893,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='137' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "Jul 17 20" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "July 17 20" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='138' class='node then pass' status='pass'><b>Then</b>
@@ -919,7 +914,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='141' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "11 17 2020" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "Jun 19 2020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='142' class='node then pass' status='pass'><b>Then</b>
@@ -940,7 +935,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='145' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "07 17 20" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "Jul 17 20" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='146' class='node then pass' status='pass'><b>Then</b>
@@ -949,7 +944,7 @@
 					</li>
 				</ul>
 		</li>
-		<li test-id='147' class='node scenario fail' status='fail'>
+		<li test-id='147' class='node scenario pass' status='pass'>
 			
 			<b>Scenario</b>
 			
@@ -961,19 +956,16 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='149' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "10*10*20" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "11 17 2020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='150' class='node then fail' status='fail'><b>Then</b>
-						<span class="bdd-step-name">Then I should see a date on the form with a "Invalid date" for the "Negative"</span>
-							<div class='pre'><pre>java.lang.Exception: Format Not Found
-	at Stepdefination.PropineTest.i_should_see_a_date_on_the_form_with_a_for_the(PropineTest.java:84)
-	at ✽.Then I should see a date on the form with a "Invalid date" for the "Negative"(PropineLogin.feature:6)
-</pre></div>
+					<li test-id='150' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I should see a date on the form with a "NA" for the "Positive"</span>
+							<div class='pre'>passed</div>
 					</li>
 				</ul>
 		</li>
-		<li test-id='151' class='node scenario fail' status='fail'>
+		<li test-id='151' class='node scenario pass' status='pass'>
 			
 			<b>Scenario</b>
 			
@@ -985,19 +977,16 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='153' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "10.12.2020" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "07 17 20" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='154' class='node then fail' status='fail'><b>Then</b>
-						<span class="bdd-step-name">Then I should see a date on the form with a "Invalid date" for the "Negative"</span>
-							<div class='pre'><pre>java.lang.Exception: Format Not Found
-	at Stepdefination.PropineTest.i_should_see_a_date_on_the_form_with_a_for_the(PropineTest.java:84)
-	at ✽.Then I should see a date on the form with a "Invalid date" for the "Negative"(PropineLogin.feature:6)
-</pre></div>
+					<li test-id='154' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I should see a date on the form with a "NA" for the "Positive"</span>
+							<div class='pre'>passed</div>
 					</li>
 				</ul>
 		</li>
-		<li test-id='155' class='node scenario fail' status='fail'>
+		<li test-id='155' class='node scenario pass' status='pass'>
 			
 			<b>Scenario</b>
 			
@@ -1009,19 +998,16 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='157' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "10&11&2020" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "10*10*2020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='158' class='node then fail' status='fail'><b>Then</b>
+					<li test-id='158' class='node then pass' status='pass'><b>Then</b>
 						<span class="bdd-step-name">Then I should see a date on the form with a "Invalid date" for the "Negative"</span>
-							<div class='pre'><pre>java.lang.Exception: Format Not Found
-	at Stepdefination.PropineTest.i_should_see_a_date_on_the_form_with_a_for_the(PropineTest.java:84)
-	at ✽.Then I should see a date on the form with a "Invalid date" for the "Negative"(PropineLogin.feature:6)
-</pre></div>
+							<div class='pre'>passed</div>
 					</li>
 				</ul>
 		</li>
-		<li test-id='159' class='node scenario fail' status='fail'>
+		<li test-id='159' class='node scenario pass' status='pass'>
 			
 			<b>Scenario</b>
 			
@@ -1033,19 +1019,16 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='161' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "11@10#2020" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "10.12.2020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='162' class='node then fail' status='fail'><b>Then</b>
+					<li test-id='162' class='node then pass' status='pass'><b>Then</b>
 						<span class="bdd-step-name">Then I should see a date on the form with a "Invalid date" for the "Negative"</span>
-							<div class='pre'><pre>java.lang.Exception: Format Not Found
-	at Stepdefination.PropineTest.i_should_see_a_date_on_the_form_with_a_for_the(PropineTest.java:84)
-	at ✽.Then I should see a date on the form with a "Invalid date" for the "Negative"(PropineLogin.feature:6)
-</pre></div>
+							<div class='pre'>passed</div>
 					</li>
 				</ul>
 		</li>
-		<li test-id='163' class='node scenario fail' status='fail'>
+		<li test-id='163' class='node scenario pass' status='pass'>
 			
 			<b>Scenario</b>
 			
@@ -1057,19 +1040,16 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='165' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "10$12%2020" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "10&11&2020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='166' class='node then fail' status='fail'><b>Then</b>
+					<li test-id='166' class='node then pass' status='pass'><b>Then</b>
 						<span class="bdd-step-name">Then I should see a date on the form with a "Invalid date" for the "Negative"</span>
-							<div class='pre'><pre>java.lang.Exception: Format Not Found
-	at Stepdefination.PropineTest.i_should_see_a_date_on_the_form_with_a_for_the(PropineTest.java:84)
-	at ✽.Then I should see a date on the form with a "Invalid date" for the "Negative"(PropineLogin.feature:6)
-</pre></div>
+							<div class='pre'>passed</div>
 					</li>
 				</ul>
 		</li>
-		<li test-id='167' class='node scenario fail' status='fail'>
+		<li test-id='167' class='node scenario pass' status='pass'>
 			
 			<b>Scenario</b>
 			
@@ -1081,19 +1061,16 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='169' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "2009(10%10" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "11@10#2020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='170' class='node then fail' status='fail'><b>Then</b>
+					<li test-id='170' class='node then pass' status='pass'><b>Then</b>
 						<span class="bdd-step-name">Then I should see a date on the form with a "Invalid date" for the "Negative"</span>
-							<div class='pre'><pre>java.lang.Exception: Format Not Found
-	at Stepdefination.PropineTest.i_should_see_a_date_on_the_form_with_a_for_the(PropineTest.java:84)
-	at ✽.Then I should see a date on the form with a "Invalid date" for the "Negative"(PropineLogin.feature:6)
-</pre></div>
+							<div class='pre'>passed</div>
 					</li>
 				</ul>
 		</li>
-		<li test-id='171' class='node scenario fail' status='fail'>
+		<li test-id='171' class='node scenario pass' status='pass'>
 			
 			<b>Scenario</b>
 			
@@ -1105,15 +1082,12 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='173' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "20221010" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "10$12%2020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='174' class='node then fail' status='fail'><b>Then</b>
+					<li test-id='174' class='node then pass' status='pass'><b>Then</b>
 						<span class="bdd-step-name">Then I should see a date on the form with a "Invalid date" for the "Negative"</span>
-							<div class='pre'><pre>java.lang.Exception: Format Not Found
-	at Stepdefination.PropineTest.i_should_see_a_date_on_the_form_with_a_for_the(PropineTest.java:84)
-	at ✽.Then I should see a date on the form with a "Invalid date" for the "Negative"(PropineLogin.feature:6)
-</pre></div>
+							<div class='pre'>passed</div>
 					</li>
 				</ul>
 		</li>
@@ -1129,7 +1103,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='177' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "10-09-2019" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "2009(10%10" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='178' class='node then pass' status='pass'><b>Then</b>
@@ -1150,7 +1124,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='181' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "10/09/2001" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "20221010" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='182' class='node then pass' status='pass'><b>Then</b>
@@ -1171,7 +1145,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='185' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "10 09 2019" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "10-09-2019" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='186' class='node then pass' status='pass'><b>Then</b>
@@ -1180,7 +1154,7 @@
 					</li>
 				</ul>
 		</li>
-		<li test-id='187' class='node scenario fail' status='fail'>
+		<li test-id='187' class='node scenario pass' status='pass'>
 			
 			<b>Scenario</b>
 			
@@ -1192,19 +1166,16 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='189' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "10-ju-2020" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "10/09/2001" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='190' class='node then fail' status='fail'><b>Then</b>
+					<li test-id='190' class='node then pass' status='pass'><b>Then</b>
 						<span class="bdd-step-name">Then I should see a date on the form with a "Invalid date" for the "Negative"</span>
-							<div class='pre'><pre>java.lang.Exception: Format Not Found
-	at Stepdefination.PropineTest.i_should_see_a_date_on_the_form_with_a_for_the(PropineTest.java:84)
-	at ✽.Then I should see a date on the form with a "Invalid date" for the "Negative"(PropineLogin.feature:6)
-</pre></div>
+							<div class='pre'>passed</div>
 					</li>
 				</ul>
 		</li>
-		<li test-id='191' class='node scenario fail' status='fail'>
+		<li test-id='191' class='node scenario pass' status='pass'>
 			
 			<b>Scenario</b>
 			
@@ -1216,19 +1187,16 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='193' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I enter "10/Au/2020" on the input field and click Submit button</span>
+						<span class="bdd-step-name">When I enter "10 09 2019" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='194' class='node then fail' status='fail'><b>Then</b>
+					<li test-id='194' class='node then pass' status='pass'><b>Then</b>
 						<span class="bdd-step-name">Then I should see a date on the form with a "Invalid date" for the "Negative"</span>
-							<div class='pre'><pre>java.lang.Exception: Format Not Found
-	at Stepdefination.PropineTest.i_should_see_a_date_on_the_form_with_a_for_the(PropineTest.java:84)
-	at ✽.Then I should see a date on the form with a "Invalid date" for the "Negative"(PropineLogin.feature:6)
-</pre></div>
+							<div class='pre'>passed</div>
 					</li>
 				</ul>
 		</li>
-		<li test-id='195' class='node scenario fail' status='fail'>
+		<li test-id='195' class='node scenario pass' status='pass'>
 			
 			<b>Scenario</b>
 			
@@ -1243,16 +1211,13 @@
 						<span class="bdd-step-name">When I enter "10102020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='198' class='node then fail' status='fail'><b>Then</b>
+					<li test-id='198' class='node then pass' status='pass'><b>Then</b>
 						<span class="bdd-step-name">Then I should see a date on the form with a "Invalid date" for the "Negative"</span>
-							<div class='pre'><pre>java.lang.Exception: Format Not Found
-	at Stepdefination.PropineTest.i_should_see_a_date_on_the_form_with_a_for_the(PropineTest.java:84)
-	at ✽.Then I should see a date on the form with a "Invalid date" for the "Negative"(PropineLogin.feature:6)
-</pre></div>
+							<div class='pre'>passed</div>
 					</li>
 				</ul>
 		</li>
-		<li test-id='199' class='node scenario fail' status='fail'>
+		<li test-id='199' class='node scenario pass' status='pass'>
 			
 			<b>Scenario</b>
 			
@@ -1267,12 +1232,9 @@
 						<span class="bdd-step-name">When I enter "17:10:2020" on the input field and click Submit button</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='202' class='node then fail' status='fail'><b>Then</b>
+					<li test-id='202' class='node then pass' status='pass'><b>Then</b>
 						<span class="bdd-step-name">Then I should see a date on the form with a "Invalid date" for the "Negative"</span>
-							<div class='pre'><pre>java.lang.Exception: Format Not Found
-	at Stepdefination.PropineTest.i_should_see_a_date_on_the_form_with_a_for_the(PropineTest.java:84)
-	at ✽.Then I should see a date on the form with a "Invalid date" for the "Negative"(PropineLogin.feature:6)
-</pre></div>
+							<div class='pre'>passed</div>
 					</li>
 				</ul>
 		</li>
@@ -1453,158 +1415,6 @@
 </div>
 <!-- test view -->
 <!-- category view -->
-<div id='exception-view' class='view hide'>
-
-    <section id='controls'>
-        <div class='controls grey lighten-4'>
-            <!-- search -->
-            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
-                <a href="#" class='search-div'>
-                    <i class='material-icons'>search</i> Search
-                </a>
-
-                <div class='input-field left hide'>
-                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-                </div>
-
-            </div>
-            <!-- search -->
-        </div>
-    </section>
-
-    <div class='subview-left left'>
-
-        <div class='view-summary'>
-            <h5>Exceptions</h3>
-                <ul id='exception-collection' class='exception-collection'>
-
-                        <li class='exception displayed active'>
-                            <div class='exception-heading'>
-                                <span class='exception-name'>java.lang.Exception</span>
-                                <span class='exception-count right'><span class='label red lighten-1 white-text'>12</span></span>
-                            </div>
-                            <div class='exception-content hide'>
-                                <div class='exception-tests'>
-                                    <table class='bordered table-results'>
-                                        <thead>
-                                        <tr>
-                                            <th>Timestamp</th>
-                                            <th>TestName</th>
-                                            <th>Status</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                                    <tr>
-                                                        <td>Jun 25, 2020 06:46:25 PM</td>
-                                                        <td class='linked' test-id='126'>Date Validation on form.User wants to enter the delivery date on form..User wants to enter the delivery date on form..Then I should see a date on the form with a "NA" for the "Positive"</td>
-                                                        <td><pre><pre>java.lang.Exception: Format Not Found
-	at Stepdefination.PropineTest.i_should_see_a_date_on_the_form_with_a_for_the(PropineTest.java:84)
-	at ✽.Then I should see a date on the form with a "NA" for the "Positive"(PropineLogin.feature:6)
-</pre></pre></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Jun 25, 2020 06:47:42 PM</td>
-                                                        <td class='linked' test-id='150'>Date Validation on form.User wants to enter the delivery date on form..User wants to enter the delivery date on form..Then I should see a date on the form with a "Invalid date" for the "Negative"</td>
-                                                        <td><pre><pre>java.lang.Exception: Format Not Found
-	at Stepdefination.PropineTest.i_should_see_a_date_on_the_form_with_a_for_the(PropineTest.java:84)
-	at ✽.Then I should see a date on the form with a "Invalid date" for the "Negative"(PropineLogin.feature:6)
-</pre></pre></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Jun 25, 2020 06:47:53 PM</td>
-                                                        <td class='linked' test-id='154'>Date Validation on form.User wants to enter the delivery date on form..User wants to enter the delivery date on form..Then I should see a date on the form with a "Invalid date" for the "Negative"</td>
-                                                        <td><pre><pre>java.lang.Exception: Format Not Found
-	at Stepdefination.PropineTest.i_should_see_a_date_on_the_form_with_a_for_the(PropineTest.java:84)
-	at ✽.Then I should see a date on the form with a "Invalid date" for the "Negative"(PropineLogin.feature:6)
-</pre></pre></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Jun 25, 2020 06:48:09 PM</td>
-                                                        <td class='linked' test-id='158'>Date Validation on form.User wants to enter the delivery date on form..User wants to enter the delivery date on form..Then I should see a date on the form with a "Invalid date" for the "Negative"</td>
-                                                        <td><pre><pre>java.lang.Exception: Format Not Found
-	at Stepdefination.PropineTest.i_should_see_a_date_on_the_form_with_a_for_the(PropineTest.java:84)
-	at ✽.Then I should see a date on the form with a "Invalid date" for the "Negative"(PropineLogin.feature:6)
-</pre></pre></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Jun 25, 2020 06:48:28 PM</td>
-                                                        <td class='linked' test-id='162'>Date Validation on form.User wants to enter the delivery date on form..User wants to enter the delivery date on form..Then I should see a date on the form with a "Invalid date" for the "Negative"</td>
-                                                        <td><pre><pre>java.lang.Exception: Format Not Found
-	at Stepdefination.PropineTest.i_should_see_a_date_on_the_form_with_a_for_the(PropineTest.java:84)
-	at ✽.Then I should see a date on the form with a "Invalid date" for the "Negative"(PropineLogin.feature:6)
-</pre></pre></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Jun 25, 2020 06:48:54 PM</td>
-                                                        <td class='linked' test-id='166'>Date Validation on form.User wants to enter the delivery date on form..User wants to enter the delivery date on form..Then I should see a date on the form with a "Invalid date" for the "Negative"</td>
-                                                        <td><pre><pre>java.lang.Exception: Format Not Found
-	at Stepdefination.PropineTest.i_should_see_a_date_on_the_form_with_a_for_the(PropineTest.java:84)
-	at ✽.Then I should see a date on the form with a "Invalid date" for the "Negative"(PropineLogin.feature:6)
-</pre></pre></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Jun 25, 2020 06:49:15 PM</td>
-                                                        <td class='linked' test-id='170'>Date Validation on form.User wants to enter the delivery date on form..User wants to enter the delivery date on form..Then I should see a date on the form with a "Invalid date" for the "Negative"</td>
-                                                        <td><pre><pre>java.lang.Exception: Format Not Found
-	at Stepdefination.PropineTest.i_should_see_a_date_on_the_form_with_a_for_the(PropineTest.java:84)
-	at ✽.Then I should see a date on the form with a "Invalid date" for the "Negative"(PropineLogin.feature:6)
-</pre></pre></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Jun 25, 2020 06:49:39 PM</td>
-                                                        <td class='linked' test-id='174'>Date Validation on form.User wants to enter the delivery date on form..User wants to enter the delivery date on form..Then I should see a date on the form with a "Invalid date" for the "Negative"</td>
-                                                        <td><pre><pre>java.lang.Exception: Format Not Found
-	at Stepdefination.PropineTest.i_should_see_a_date_on_the_form_with_a_for_the(PropineTest.java:84)
-	at ✽.Then I should see a date on the form with a "Invalid date" for the "Negative"(PropineLogin.feature:6)
-</pre></pre></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Jun 25, 2020 06:51:20 PM</td>
-                                                        <td class='linked' test-id='190'>Date Validation on form.User wants to enter the delivery date on form..User wants to enter the delivery date on form..Then I should see a date on the form with a "Invalid date" for the "Negative"</td>
-                                                        <td><pre><pre>java.lang.Exception: Format Not Found
-	at Stepdefination.PropineTest.i_should_see_a_date_on_the_form_with_a_for_the(PropineTest.java:84)
-	at ✽.Then I should see a date on the form with a "Invalid date" for the "Negative"(PropineLogin.feature:6)
-</pre></pre></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Jun 25, 2020 06:51:37 PM</td>
-                                                        <td class='linked' test-id='194'>Date Validation on form.User wants to enter the delivery date on form..User wants to enter the delivery date on form..Then I should see a date on the form with a "Invalid date" for the "Negative"</td>
-                                                        <td><pre><pre>java.lang.Exception: Format Not Found
-	at Stepdefination.PropineTest.i_should_see_a_date_on_the_form_with_a_for_the(PropineTest.java:84)
-	at ✽.Then I should see a date on the form with a "Invalid date" for the "Negative"(PropineLogin.feature:6)
-</pre></pre></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Jun 25, 2020 06:51:50 PM</td>
-                                                        <td class='linked' test-id='198'>Date Validation on form.User wants to enter the delivery date on form..User wants to enter the delivery date on form..Then I should see a date on the form with a "Invalid date" for the "Negative"</td>
-                                                        <td><pre><pre>java.lang.Exception: Format Not Found
-	at Stepdefination.PropineTest.i_should_see_a_date_on_the_form_with_a_for_the(PropineTest.java:84)
-	at ✽.Then I should see a date on the form with a "Invalid date" for the "Negative"(PropineLogin.feature:6)
-</pre></pre></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Jun 25, 2020 06:52:15 PM</td>
-                                                        <td class='linked' test-id='202'>Date Validation on form.User wants to enter the delivery date on form..User wants to enter the delivery date on form..Then I should see a date on the form with a "Invalid date" for the "Negative"</td>
-                                                        <td><pre><pre>java.lang.Exception: Format Not Found
-	at Stepdefination.PropineTest.i_should_see_a_date_on_the_form_with_a_for_the(PropineTest.java:84)
-	at ✽.Then I should see a date on the form with a "Invalid date" for the "Negative"(PropineLogin.feature:6)
-</pre></pre></td>
-                                                    </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </li>
-                </ul>
-        </div>
-    </div>
-
-    <div class='subview-right left'>
-        <div class='view-summary'>
-            <h5 class='exception-name'></h5>
-        </div>
-    </div>
-</div>
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
@@ -1632,19 +1442,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jun 25, 2020 06:39:46 PM</div>
+					<div class='panel-lead'>Jun 26, 2020 01:51:54 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jun 25, 2020 06:54:26 PM</div>
+			 		<div class='panel-lead'>Jun 26, 2020 02:04:21 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>880,021ms</div>
+					<div class='panel-lead'>746,922ms</div>
 				</div>
 			</div>
 		</div>
@@ -1657,31 +1467,31 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 0,
-				failParent: 1,
+				passParent: 1,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 1,
+				exceptionsParent: 0,
 				
-				passChild: 45,
-				failChild: 12,
+				passChild: 57,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 12,
+				exceptionsChild: 0,
 				
-				passGrandChild: 159,
-				failGrandChild: 12,
+				passGrandChild: 171,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
 				skipGrandChild: 0,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 12,
+				exceptionsGrandChild: 0,
 			};
 		</script>
 		
