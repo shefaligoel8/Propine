@@ -17,10 +17,9 @@ public class PropineTest {
 
 	@Given("^I am a website user$")
 	public void i_am_a_website_user() throws Throwable {
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\Sourav\\Desktop\\chromedriver_win32\\chromedriver.exe"); 
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Shefali\\Desktop\\chromedriver_win32\\chromedriver.exe"); 
 		driver =new ChromeDriver(); 
 		String baseURL ="https://vast-dawn-73245.herokuapp.com/";
-		System.out.println("Login Successfully");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.get(baseURL); 
@@ -31,52 +30,62 @@ public class PropineTest {
 		WebElement Datefield = driver.findElement(By.xpath("//input[@class='form-control']"));
 		Datefield.sendKeys(Date);
 		strInputDate=Date;
-		System.out.println("Date Format is:"+ Date);
-		System.out.println("Date entered successfully");
 		WebElement SubmitButton = driver.findElement(By.xpath("//input[@class='btn btn-default']"));
 		SubmitButton.click();
-		System.out.println("Submit button clicked successfully");
+
+
 	}
 
 	@Then("^I should see a date on the form with a \"([^\"]*)\" for the \"([^\"]*)\"$")
 	public void i_should_see_a_date_on_the_form_with_a_for_the(String value,String scenario) throws Throwable {
 		WebElement DateFormatValidation = driver.findElement(By.xpath("//div[@class='col-md-6']/div"));
 		String strdate=DateFormatValidation.getText().trim();
-		
-		String []arrstrDate=strdate.split(":");
-		String arroldDate=arrstrDate[0];
-		String oldDate=arroldDate.substring(4,arroldDate.length()-3).trim();
-		System.out.println("stroldDate Format is:"+oldDate);
-		//DateFormatValidation.getAttribute("innerText");
-		//System.out.println("strdate Format is:"+DateFormatValidation.getAttribute("innerText"));
-		
-		Set<SimpleDateFormat> dateFormatList = new LinkedHashSet<SimpleDateFormat>();	
+
+		 String []arrstrDate=strdate.split(":");
+		 String arroldDate=arrstrDate[0];
+		 String oldDate=arroldDate.substring(4,arroldDate.length()-3).trim();
+
+
+		List<SimpleDateFormat> dateFormatList = new ArrayList<SimpleDateFormat>();
+
+		dateFormatList.add(new SimpleDateFormat("MM-dd-yyyy"));
+		dateFormatList.add(new SimpleDateFormat("MM-dd-yy"));
 		dateFormatList.add(new SimpleDateFormat("dd-MMMM-yyyy"));
 		dateFormatList.add(new SimpleDateFormat("dd-MMMM-yy"));
-		dateFormatList.add(new SimpleDateFormat("MMMM-dd-yy"));
+		dateFormatList.add(new SimpleDateFormat("dd-MMM-yyyy"));
+		dateFormatList.add(new SimpleDateFormat("dd-MMM-yy"));
 		dateFormatList.add(new SimpleDateFormat("dd-MM-yyyy"));
 		dateFormatList.add(new SimpleDateFormat("dd-MM-yy"));
 		dateFormatList.add(new SimpleDateFormat("MMMM-dd-yyyy"));
+		dateFormatList.add(new SimpleDateFormat("MMMM-dd-yy"));
 		dateFormatList.add(new SimpleDateFormat("MMM-dd-yyyy"));
-	    dateFormatList.add(new SimpleDateFormat("MM-dd-yy")); 
+		dateFormatList.add(new SimpleDateFormat("MMM-dd-yy"));
+		dateFormatList.add(new SimpleDateFormat("MM/dd/yyyy"));
+		dateFormatList.add(new SimpleDateFormat("MM/dd/yy"));
 		dateFormatList.add(new SimpleDateFormat("dd/MMMM/yyyy"));
 		dateFormatList.add(new SimpleDateFormat("dd/MMMM/yy"));
-		dateFormatList.add(new SimpleDateFormat("MMMM/dd/yy"));
+		dateFormatList.add(new SimpleDateFormat("dd/MMM/yyyy"));
+		dateFormatList.add(new SimpleDateFormat("dd/MMM/yy"));
 		dateFormatList.add(new SimpleDateFormat("dd/MM/yyyy"));
 		dateFormatList.add(new SimpleDateFormat("dd/MM/yy"));
 		dateFormatList.add(new SimpleDateFormat("MMMM/dd/yyyy"));
-	    dateFormatList.add(new SimpleDateFormat("MMM/dd/yyyy"));
-		dateFormatList.add(new SimpleDateFormat("MM/dd/yy")); 
+		dateFormatList.add(new SimpleDateFormat("MMMM/dd/yy"));
+		dateFormatList.add(new SimpleDateFormat("MMM/dd/yyyy"));
+		dateFormatList.add(new SimpleDateFormat("MMM/dd/yy"));
+		dateFormatList.add(new SimpleDateFormat("MM dd yyyy"));
+		dateFormatList.add(new SimpleDateFormat("dd MM yy"));
 		dateFormatList.add(new SimpleDateFormat("dd MMMM yyyy"));
 		dateFormatList.add(new SimpleDateFormat("dd MMMM yy"));
-		dateFormatList.add(new SimpleDateFormat("MMMM dd yy"));
+		dateFormatList.add(new SimpleDateFormat("dd MMM yyyy"));
+		dateFormatList.add(new SimpleDateFormat("dd MMM yy"));
 		dateFormatList.add(new SimpleDateFormat("dd MM yyyy"));
 		dateFormatList.add(new SimpleDateFormat("dd MM yy"));
 		dateFormatList.add(new SimpleDateFormat("MMMM dd yyyy"));
-		dateFormatList.add(new SimpleDateFormat("MM dd yyyy"));
-		dateFormatList.add(new SimpleDateFormat("MM dd yy"));
-	    dateFormatList.add(new SimpleDateFormat("MM*dd*yyyy")); 
-	    dateFormatList.add(new SimpleDateFormat("MM.dd.yyyy"));
+		dateFormatList.add(new SimpleDateFormat("MMMM dd yy"));
+		dateFormatList.add(new SimpleDateFormat("MMM dd yyyy"));
+		dateFormatList.add(new SimpleDateFormat("MMM dd yy"));
+		dateFormatList.add(new SimpleDateFormat("MM*dd*yyyy"));
+		dateFormatList.add(new SimpleDateFormat("MM.dd.yyyy"));
 	    dateFormatList.add(new SimpleDateFormat("MM&dd&yyyy"));
 	    dateFormatList.add(new SimpleDateFormat("MM@dd#yyyy"));
 	    dateFormatList.add(new SimpleDateFormat("MM$dd%yyyy"));
@@ -84,7 +93,13 @@ public class PropineTest {
 	    dateFormatList.add(new SimpleDateFormat("yyyyddMM"));
 	    dateFormatList.add(new SimpleDateFormat("ddMMyyyy"));
 	    dateFormatList.add(new SimpleDateFormat("dd:MM:yyyy"));
-	   
+		dateFormatList.add(new SimpleDateFormat("dd-yyyy-mm"));
+		dateFormatList.add(new SimpleDateFormat("dd/yyyy/mm"));
+		dateFormatList.add(new SimpleDateFormat("dd yyyy mm"));
+		dateFormatList.add(new SimpleDateFormat("yyyy-dd-mm"));
+		dateFormatList.add(new SimpleDateFormat("yyyy-dd-mm"));
+		dateFormatList.add(new SimpleDateFormat("yyyy-dd-mm"));
+
 		boolean isConverted = false;
 		Date date = null;
 		for(SimpleDateFormat dateFormat : dateFormatList) {
@@ -97,38 +112,42 @@ public class PropineTest {
 		String newDate="";
 		if(isConverted)
 		{
-		
-		SimpleDateFormat dateFormat =  new SimpleDateFormat("MMM dd 20yy");
-		newDate=dateFormat.format(date).trim();
-		System.out.println("strNewDate Format is: "+newDate);
-		
-		if(scenario.equals("Positive"))
-		{ 
-			if(oldDate.equals(newDate))
-		{
-			System.out.println("The test case is passed.");
+			SimpleDateFormat dateFormat = new SimpleDateFormat("MMM dd 20yy");
+			newDate=dateFormat.format(date).trim();
+			date=null;
+
+			if(scenario.equals("Positive"))
+			{ 
+				if(!oldDate.equals(newDate) | oldDate.equals(value))
+			{
+				System.out.println("It is a defect.");
+			}
+			else
+			{
+				System.out.println("The test Case is passed.");
+			}
+
+			} else if(scenario.equals("Negative"))
+			{
+
+				if(value.equals(strdate))
+			{
+				System.out.println("The test case is passed.");
+			}
+				else 
+			{ 
+				System.out.println("It is a defect."); 
+			}
+
+			}
 		}
 		else
 		{
-			System.out.println("It is a defect."); 
-		}
-
-		} else if(scenario.equals("Negative"))
-		{
-
-			if(value.equals(newDate))
-		{
 			System.out.println("The test case is passed.");
-		}
-			else 
-		{ 
-			System.out.println("It is a defect."); 
-		}
 
 		}
 		driver.close();
 		driver.quit();
 	}
-}
 }
 
