@@ -18,7 +18,7 @@ public class TestRunner
    {
 	@AfterClass
 	public static void writeExtentReport() {
-		String reportConfigPath="C:\\Users\\Sourav\\eclipse-workspace\\Propine-Assignment\\src\\test\\java\\extent-config.xml";
+		String reportConfigPath="C:\\Users\\Shefali\\eclipse-workspace\\Propine-Assignment\\src\\test\\java\\extent-config.xml";
 		Reporter.loadXMLConfig(new File(reportConfigPath));
 	}
 }              
